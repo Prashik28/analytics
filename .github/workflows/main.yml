@@ -3,8 +3,8 @@ name: Deploy Container App to Azure
 on:
   push:
     branches: ["main"]
-    paths:
-      - "/src/*"
+    #paths:
+    #  - "/src/*"
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
     - name: Build and deploy Container App
       uses: azure/container-apps-deploy-action@v1
       with:
-        appSourcePath: ${{ github.workspace }}/src/
+        appSourcePath: ${{ github.workspace }}/src
         acrName: prashik
         containerAppName: mypyapp
         resourceGroup: mypyappRG
