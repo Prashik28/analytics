@@ -7,10 +7,10 @@ on:
     #  - "/src/*"
   workflow_dispatch:
 
-jobs:
-  build-any-deploy:
-    runs-on: ubuntu-latest
-    environment: dev
+#jobs:
+#  build-any-deploy:
+#    runs-on: ubuntu-latest
+#    environment: dev
     steps:
  #   - name: 'Checkout Github Action'
  #     uses: action/checkout@v1
