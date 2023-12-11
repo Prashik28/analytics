@@ -17,7 +17,7 @@ jobs:
     - name: Log In to Azure
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.myRepo }}
+        creds: ${{ secrets.MYREPO }}
 
     - name: Build and deploy Container App
       uses: azure/container-apps-deploy-action@v1
