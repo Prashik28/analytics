@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     steps:
-    - name: 'Checkout Github Action'
-      uses: action/checkout@v1
-      with:
-        token: ${{ secrets.MYTOKEN }}
+ #   - name: 'Checkout Github Action'
+ #     uses: action/checkout@v1
+ #    with:
+  #      token: ${{ secrets.MYTOKEN }}
 
     - name: Log In to Azure
       uses: azure/login@v1
