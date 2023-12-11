@@ -7,8 +7,8 @@ on:
     #  - "/src/*"
   workflow_dispatch:
 
-#jobs:
-#  build-any-deploy:
+jobs:
+  build-any-deploy:
 #    runs-on: ubuntu-latest
 #    environment: dev
     steps:
