@@ -13,7 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory : /src
+        working-directory : src
     steps:
     #checkout the repo
     - name : 'Chekcout Github Action'
@@ -33,6 +33,7 @@ jobs:
       
     - run:
         docker build . -t 2024registry.azurecr.io/mypythonapp_cli:latest
+    - run:
         docker push 2024registry.azurecr.io/mypythonapp_cli:latest
 
     - name : Azure Logout
