@@ -1,8 +1,8 @@
 name: Deploy Container Image to Azure App Service
 
 on:
-  push:
-    branches: ["main"]
+  #push:
+  #  branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -31,7 +31,7 @@ jobs:
       with:
         login-server: 2024registry.azurecr.io
         username: 2024Registry
-        password: vRTiEmt0Aa5yn6XbugLqfi0sannFD+w9sFtAWZu7wN+ACRDUqbS2
+        password: XXXXX
       
     - name : 'Build Docker Image'
       run: 
