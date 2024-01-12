@@ -31,9 +31,8 @@ jobs:
         username: $${{ secrets.REGISTRY_USERNAME }}
         password: $${{ secrets.REGISTRY_PASSWORD }}
       
-    - run:
+    - run: |
         docker build . -t 2024registry.azurecr.io/mypythonapp_cli:latest
-    - run:
         docker push 2024registry.azurecr.io/mypythonapp_cli:latest
 
     - name : Azure Logout
