@@ -35,6 +35,9 @@ jobs:
         docker build . -t 2024registry.azurecr.io/mypythonapp_cli:latest
         docker push 2024registry.azurecr.io/mypythonapp_cli:latest
 
+
+    - run:
+        az containerapp up --name "mypythonappcli" --resource-group "2024RG" --environment "managedEnvironment-2024RG-864b" --image "2024registry.azurecr.io/mypythonapp_cli" --target-port 3500 --ingress 'external' --registry-server "2024registry.azurecr.io" --query properties.configuration.ingress.fqdn
     - name : Azure Logout
       run:
         az logout
