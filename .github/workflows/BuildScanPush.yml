@@ -10,7 +10,7 @@ on:
       ImageName:
         description: 'name of the Image'
         required: true
-        default: 'mypyappcicd'
+        default: 'mypyapp2'
       DockerPath:
         description: 'Provide the Docker path relative to git'
         required: true
