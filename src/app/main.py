@@ -29,7 +29,8 @@ albums = [
     Album(5, "Lock Down Your Love", "V is for VNET", 12.99, "https://aka.ms/albums-vnetlogo"),
     Album(6, "Sweet Container O' Mine", "Guns N Probeses", 14.99, "https://aka.ms/albums-containerappslogo"),
     Album(7, "You, Me and an App Id", "Daprize", 10.99, "https://aka.ms/albums-daprlogo"),
-    Album(8, "You, Me and an App Id", "Daprize", 10.99, "https://EIGHT")
+    Album(8, "You, Me and an App Id", "Daprize", 10.99, "https://EIGHT"),
+    Album(9, "You, Me and an App Id", "Daprize", 10.99, "https://NINE")
 ]
 
 @app.get("/")
