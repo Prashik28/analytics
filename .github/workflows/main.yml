@@ -33,7 +33,6 @@ jobs:
       
     - run:
         docker build . -t 2024registry.azurecr.io/mypythonapp_cli:latest
-    - run:
         docker push 2024registry.azurecr.io/mypythonapp_cli:latest
 
     - name : Azure Logout
