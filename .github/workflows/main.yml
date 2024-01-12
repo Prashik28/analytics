@@ -28,8 +28,8 @@ jobs:
     - uses: azure/docker-login@v1
       with:
         login-server: 2024registry.azurecr.io
-        username: $${{ secrets.REGISTRY_USERNAME }}
-        password: $${{ secrets.REGISTRY_PASSWORD }}
+        username: 2024Registry
+        password: vRTiEmt0Aa5yn6XbugLqfi0sannFD+w9sFtAWZu7wN+ACRDUqbS2
       
     - run: |
         docker build . -t 2024registry.azurecr.io/mypythonapp_cli:latest
