@@ -31,10 +31,8 @@ jobs:
         username: $${{ secrets.REGISTRY_USERNAME }}
         password: $${{ secrets.REGISTRY_PASSWORD }}
       
-    - name: 'Image Building'
     - run:
         docker build . -t 2024registry.azurecr.io/mypythonapp_cli:latest
-    - name : 'Image Push'
     - run:
         docker push 2024registry.azurecr.io/mypythonapp_cli:latest
 
