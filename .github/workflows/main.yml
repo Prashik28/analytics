@@ -27,5 +27,5 @@ jobs:
       with:
         appSourcePath: ${{ github.workspace }}
         acrName: prashik
-        containerAppName: mypyapp
-        resourceGroup: mypyappRG
+        containerAppName: mypyapp2
+        resourceGroup: testapp
