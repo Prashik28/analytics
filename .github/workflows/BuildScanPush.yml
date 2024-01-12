@@ -1,0 +1,34 @@
+name: BuildScanAndPushDockerImage
+
+on:
+  workflow_dispatch:
+    inputs:
+      ImageVersion:
+        description: 'Provide the Image Version to Build'
+        required: false
+        default: 'latest'
+      ImageName:
+        description: 'name of the Image'
+        required: true
+        default: 'mypyappcicd'
+      DockerPath:
+        description: 'Provide the Docker path relative to git'
+        required: true
+        default: '/src'
+
+jobs:
+  BuildScanPush:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: azure/docker-login@v1
+        with:
+          login-server: ${{ secrets.ACR_SERVER }}
+          usernanme: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+
+      - run:
+          docker build ${{ github.workspace }}/${{ github.event.inputs.DockerPath }}/ -t ${{ secrets.ACR_SERVER }}/${{ github.event.inputs.ImageName }}:${{ github.event.inputs.ImageVersion }}
+        
